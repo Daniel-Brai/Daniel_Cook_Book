@@ -1,0 +1,28 @@
+{
+  "name": "recipe_blog",
+  "version": "1.0.0",
+  "description": "An recipe built built with express, ejs and mongodb",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server",
+    "prod": "node server"
+  },
+  "keywords": [
+    "Blog",
+    "CRUD"
+  ],
+  "author": "Daniel Brai",
+  "license": "ISC",
+  "dependencies": {
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.6",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "express-ejs-layouts": "^2.5.1",
+    "express-session": "^1.17.3",
+    "mongoose": "^6.6.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
