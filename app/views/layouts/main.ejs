@@ -1,14 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
-        <%= typeof title != 'undefined' ? title: "Daniel's Recipe Book" %>
+      <%= typeof title != 'undefined' ? title: "Daniel's Recipe Book" %>
     </title>
-</head>
-<body>
-    <%- body -%>
-</body>
+    <%- include('../includes/assets.ejs'); %>
+  </head>
+  <body>
+    <div class="container-xxl px-md-5 bg-white shadow-lg">
+      <header
+        class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom"
+      >
+        <a
+          href="/"
+          class="d-flex align-items-center col-md-3 mb-3 mb-md-0 text-dark text-decoration-none"
+        >
+          <img
+            width="80"
+            height="68"
+            src="/images/chef.png"
+            alt="Cook Book Logo"
+          />
+        </a>
+
+        <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+          <li>
+            <a href="/" class="nav-link px-2 link-secondary">Home</a>
+          </li>
+          <li>
+            <a href="/about" class="nav-link px-2 link-secondary">About</a>
+          </li>
+          <li>
+            <a href="/your-recipes" class="nav-link px-2 link-secondary"
+              >Recipes</a
+            >
+          </li>
+          <li>
+            <a href="/contact" class="nav-link px-2 link-secondary">Contact</a>
+          </li>
+        </ul>
+
+        <div class="col-md-3 text-end">
+          <form action="/search" method="POST">
+            <input
+              type="search"
+              class="form-control"
+              name="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+          </form>
+        </div>
+      </header>
+
+      <main><%- body -%></main>
+
+      <footer class="py-5">
+        <p>Built with Express & Bootstrap</p>
+        <p>&#169; Copyright <%= date %>; Daniel's Cook Book</p>
+      </footer>
+    </div>
+  </body>
 </html>
