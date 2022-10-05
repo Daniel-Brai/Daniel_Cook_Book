@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "dev": "nodemon server",
-    "prod": "node server"
+    "prod": "node server",
+    "db:seed": "node database/database.seed"
   },
   "keywords": [
     "Blog",

@@ -41,6 +41,10 @@ a:hover { color: #212529; }
     border-radius: 8px;
 }
 
+.category__img--large {
+    height: 180px;
+}
+
 .category__img img { 
     width: 100%;
     object-fit: cover;
