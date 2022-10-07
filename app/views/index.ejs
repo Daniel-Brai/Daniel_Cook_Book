@@ -34,12 +34,16 @@
 </div>
 
 <div class="row row-cols-2 row-cols-lg-6 g-3 g-lg-3 py-4">
-  <a href="/categories" class="col text category__link">
-    <div class="category__img shadow">
-      <img src="/images/african-food.jpg" alt="African Food" loading="lazy" />
-    </div>
-    <div class="pt-1">African Food Recipes</div>
-  </a>
+  <% if ( categories != '') { %>
+    <% categories.forEach(function(category, index) { %>
+      <a href="/categories/<%- category.name %>" class="col text category__link">
+        <div class="category__img shadow">
+          <img src="/images/<%- category.image %>" alt="<%- category.name %>" loading="lazy" />
+        </div>
+        <div class="pt-1"> <%- category.name %> Recipes</div>
+      </a>
+    <% }) %>
+  <% } %> 
   <a href="/categories" class="col text category__link">
     <div class="category__img shadow">
       <img

@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "nodemon server",
     "prod": "node server",
-    "db:seed": "node database/database.seed"
+    "db:seed-category": "node database/database.seed --category",
+    "db:seed-recipe": "node database/database.seed --recipe"
   },
   "keywords": [
     "Blog",
